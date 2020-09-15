@@ -19,5 +19,5 @@ File AppMgr.java implements application-level activities and represents the Appl
 
 Subclasses of the Application Manager represent the deployment style of the application, e.g. Thick Client, Thin Client, etc. and encapsulate activities specific to that style.
 
-A set of Callback interfaces are used to instantiate the main application class, and this class then uses the Application Manager to access functionality in all the logical domains it supports.
+A set of Callback interfaces are used to instantiate the main application class, and this class then uses the Application Manager to access functionality in all the logical domains it supports, i.e. in additional Manager implementations like PlugInManager.
 
