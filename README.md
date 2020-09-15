@@ -15,6 +15,7 @@ File AppMgr.java implements application-level activities and represents the Appl
   private static ContentManager contentManager;
   private static ReportManager reportManager;
   private static SearchManager searchManager;
+  private static SecurityManager securityManager;
   private static ServiceManager serviceManager;
 
 Subclasses of the Application Manager represent the deployment style of the application, e.g. Thick Client, Thin Client, etc. and encapsulate activities specific to that style.
@@ -23,6 +24,6 @@ A set of Callback interfaces are used to instantiate the main application class,
 
 The Manager implementations handle CRUD requests, searches, and caching for the domain data. It interacts with a Security Manager to identify which data elements may be provided to the requester.
 
-The CRUD interface provides a business-level (functional) view of the data and hides the details of accessing the data source. The Manager will employ DAO objects and services to access the desired backend data store. These are determined in configuration artefacts, usually files, and allow the Manager to change its DAO access method with a simple configuration update.
+The CRUD interface provides a business-level (functional) view of the data and hides the details of accessing the data source. The Manager will employ DAO objects and services to access the desired backend data store. These are determined in configuration artefacts, usually files, and allow the Manager to change its DAO access method with a simple configuration update. The Manager will also decide whether to cache, what to cache and how to do that, and provides methods to the programmer to support any performance requirements that can be better attained via caching.
 
 
