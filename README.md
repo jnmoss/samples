@@ -21,3 +21,8 @@ Subclasses of the Application Manager represent the deployment style of the appl
 
 A set of Callback interfaces are used to instantiate the main application class, and this class then uses the Application Manager to access functionality in all the logical domains it supports, i.e. in additional Manager implementations like PlugInManager.
 
+The Manager implementations handle CRUD requests, searches, and caching for the domain data. It interacts with a Security Manager to identify which data elements may be provided to the requester.
+
+The CRUD interface provides a business-level (functional) view of the data and hides the details of accessing the data source. The Manager will employ DAO objects and services to access the desired backend data store. These are determined in configuration artefacts, usually files, and allow the Manager to change its DAO access method with a simple configuration update.
+
+
