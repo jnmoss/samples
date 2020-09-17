@@ -20,7 +20,7 @@ The CRUD interface provides a business-level (functional) view of the data and h
 
 *** The Manager implementations ***
 
-The *UserManager* provides the CRUD operations for managing the users of the application. The main application class will use this to support addition, update, and removal of registered users of the application. Other classes in the application will get user-specific information from the UserManager to carry out authentication and authorization activities, e.g. to log in to a database with the right credentials. This prevents a more secure way of managing user data and takes away any temptation to hard-code user data within the application.
+The *UserManager* provides the CRUD operations for managing the users of the application. The main application class will use this to support addition, update, and removal of registered users of the application. Other classes in the application will get user-specific information from the UserManager to carry out authentication and authorization activities, e.g. to log in to a database with the right credentials. This provides a more secure way of managing user data and takes away any temptation to hard-code user data within the application. The UserManager will store passwords or any sensitive infomration in an encrypted form, and will never store such data in clear text.
 
 The *SecurityManager* provides the CRUD operations for managing the roles and permissions of the application. The application classes will make calls to the SecurityManager with the User details and knowledge of the requested operation, to see if the requester has the minimal access required to fulfill the request.
 
