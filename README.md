@@ -24,6 +24,6 @@ The *UserManager* provides the CRUD operations for managing the users of the app
 
 The *SecurityManager* provides the CRUD operations for managing the roles and permissions of the application. The application classes will make calls to the SecurityManager with the User details and knowledge of the requested operation, to see if the requester has the minimal access required to fulfill the request.
 
-The *PlugInManager* supports dynamic loading of functionality that may be controlled via configuration artefacts. The units of functionality are PlugIns, or becasue they are adding functionality, they can also be called AddOns. An example is a Dictionary PlugIn that adds a menu option to look up terms specific to the application. As long as the PlugIn class implements the plugin interfaces, any application can support this PlugIn by including those interfaces and the PlugInManager implementation.
+The *PlugInManager* supports dynamic loading of functionality that may be controlled via configuration artefacts. The units of functionality are PlugIns, or becasue they are adding functionality, they can also be called AddOns. An example is a Dictionary PlugIn that adds a menu option to look up terms specific to the application, or a ServiceNow PlugIn that looks up ticket information based on data managed within the application. As long as the PlugIn class implements the plugin interface, any application can support this PlugIn by including that interface and the PlugInManager implementation.
 
 
