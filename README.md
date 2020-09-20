@@ -1,6 +1,6 @@
 # samples
 
-This collection of source files is meant to represent a high-level view of the architecture I use in my personal code library. It is not meant to provide a workable project that builds an executable artefact or to imply any particular codebase structure in which to do so.
+This collection of source files is meant to represent a high-level view of the application architecture I use in my personal code library. It is not meant to provide a workable project that builds an executable artefact or to imply any particular codebase structure in which to do so.
 
 The core pattern is referred to as the Manager pattern, which encapsulates all the main activities associated with a logical domain. Each logical domain in an application should have its own Manager implmentation.
 
